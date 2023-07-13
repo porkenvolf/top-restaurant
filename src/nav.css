@@ -1,0 +1,40 @@
+@import url(./style.css);
+#nav {
+    position: fixed;
+    background: transparent;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgb(83, 77, 62);
+    z-index: 999;
+    backdrop-filter: blur(15px);
+}
+
+#nav * {
+    display: flex;
+    align-items: center;
+}
+#nav .nav-content {
+    display: flex;
+    flex: 1 1 auto;
+    max-width: var(--main-width);
+}
+#nav .nav-list {
+    display: flex;
+    flex: 1;
+    list-style-type: none;
+}
+#nav .nav-item {
+    flex: 1;
+    justify-content: flex-end;
+    padding: 20px;
+}
+#nav .nav-logo {
+    flex: 1;
+    padding: 15px;
+}
+
+#nav img {
+    height: 3rem;
+    filter: invert(1) hue-rotate(2deg) brightness(80%);
+}

@@ -1,0 +1,43 @@
+@import url(./style.css);
+#hero {
+    min-width: 100vw;
+    flex: 1 1 100vh;
+
+    background: linear-gradient(rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 1))
+            70%,
+        url(./img/jonathan-borba-8l8Yl2ruUsg-unsplash.jpg);
+    background-size: cover;
+    background-position: right;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 2rem;
+}
+#hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 5vh;
+    max-width: 600px;
+    text-shadow: 1px 1px 2px black;
+}
+#hero .hero-main-text {
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Playfair Display", serif;
+}
+#hero .hero-sub-text {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 15px;
+}
+#hero .hero-icon img {
+    width: 50px;
+    filter: invert(1);
+    border: 2px solid black;
+    border-radius: 50px;
+}
