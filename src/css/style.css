@@ -10,6 +10,7 @@
     --bg-light: rgb(62, 62, 62);
     color: rgb(224, 224, 224);
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 #container {
     min-height: 100vh;
@@ -48,6 +49,7 @@
     flex: 1;
     justify-content: flex-end;
     padding: 20px;
+    cursor: pointer;
 }
 #nav .nav-logo {
     flex: 1;

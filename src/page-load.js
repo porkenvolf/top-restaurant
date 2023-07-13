@@ -8,12 +8,24 @@ import burger4 from "./img/amirali-mirhashemian-9hIJ4ZLMnZA-unsplash.jpg";
 const divContainer = document.createElement("div");
 const body = document.querySelector("body");
 
-export default function pageLoad() {
+export default function pageLoad(page) {
     divContainer.id = "container";
+    const elements = divContainer.querySelectorAll("*");
+    elements.forEach((element) => {
+        element.remove();
+    });
 
     renderNav();
-    renderHero();
-    renderMenu();
+    switch (page) {
+        case "menu":
+            renderHero();
+            renderMenu();
+            break;
+        case "about":
+            break;
+        case "contact":
+            break;
+    }
 
     body.appendChild(divContainer);
 }
@@ -27,16 +39,22 @@ function renderNav() {
         />
         </span>
         <ul class="nav-list">
-            <li class="nav-item">MENU</li>
-            <li class="nav-item">ABOUT</li>
-            <li class="nav-item">CONTACT</li>
+            <li class="nav-item" data-href='menu'>MENU</li>
+            <li class="nav-item" data-href='about'>ABOUT</li>
+            <li class="nav-item" data-href='contact'>CONTACT</li>
         </ul>
     </div>
 `;
+
+    const links = divNav.querySelectorAll(".nav-item");
+    links.forEach((element) => {
+        element.addEventListener("click", (event) => {
+            pageLoad(event.target.getAttribute("data-href"));
+        });
+    });
     divNav.id = "nav";
     divContainer.appendChild(divNav);
 }
-
 function renderHero() {
     const divHero = document.createElement("div");
     divHero.innerHTML = `
@@ -47,7 +65,9 @@ function renderHero() {
             burgers in the whole multiverse!
         </div>
         <div class="hero-icon">
-            <img src=${arrowDown} alt="" />
+            <a href="#menu">
+                <img src=${arrowDown} alt="" />
+            </a>
         </div>
     </div>
     `;
