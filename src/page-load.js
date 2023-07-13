@@ -113,7 +113,8 @@ function renderMenu() {
                     </div>
                 </div>
             </li>
-        </ul></div>
+        </ul>
+    </div>
     
     `;
     divMenu.id = "menu";

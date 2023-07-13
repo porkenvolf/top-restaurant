@@ -110,7 +110,7 @@
     align-items: center;
 
     background: linear-gradient(rgba(0, 0, 0, 0.8) 100%, rgba(0, 0, 0, 1)) 0%,
-        url("../img/bitmap.png");
+        url("../img/bitmap.jpg");
     background-size: cover;
     background-position: right;
 }
