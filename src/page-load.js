@@ -59,63 +59,63 @@ function renderMenu() {
     divMenu.innerHTML = `
 
     <div class="menu-content">
-    <div class="menu-title">OUR MENU</div>
-    <div class="menu-sub-text">
-        Carefully crafted by artisans of meat. Please take your
-        time to choose the best one for your culinary needs
-    </div>
-    <ul class="menu-food">
-        <li class="menu-item">
-            <img
-                src=${burger1}
-                alt="" />
-            <div class="food-overlay">
-                <div class="food-name">BURGER 1</div>
-                <div class="food-description">
-                    Lorem ipsum dolor, sit amet consectetur
-                    adipisicing.
+        <div class="menu-title">OUR MENU</div>
+        <div class="menu-sub-text">
+            Carefully crafted by artisans of meat. Please take your
+            time to choose the best one for your culinary needs
+        </div>
+        <ul class="menu-food">
+            <li class="menu-item">
+                <img
+                    src=${burger1}
+                    alt="" />
+                <div class="food-overlay">
+                    <div class="food-name">BURGER 1</div>
+                    <div class="food-description">
+                        Lorem ipsum dolor, sit amet consectetur
+                        adipisicing.
+                    </div>
                 </div>
-            </div>
-        </li>
-        <li class="menu-item">
-            <img
-                src=${burger2}
-                alt="" />
-            <div class="food-overlay">
-                <div class="food-name">BURGER 2</div>
-                <div class="food-description">
-                    Lorem ipsum dolor, sit amet consectetur
-                    adipisicing.
+            </li>
+            <li class="menu-item">
+                <img
+                    src=${burger2}
+                    alt="" />
+                <div class="food-overlay">
+                    <div class="food-name">BURGER 2</div>
+                    <div class="food-description">
+                        Lorem ipsum dolor, sit amet consectetur
+                        adipisicing.
+                    </div>
                 </div>
-            </div>
-        </li>
-        <li class="menu-item">
-            <img
-                src=${burger3}
-                alt="" />
-            <div class="food-overlay">
-                <div class="food-name">BURGER 3</div>
-                <div class="food-description">
-                    Lorem ipsum dolor, sit amet consectetur
-                    adipisicing.
+            </li>
+            <li class="menu-item">
+                <img
+                    src=${burger3}
+                    alt="" />
+                <div class="food-overlay">
+                    <div class="food-name">BURGER 3</div>
+                    <div class="food-description">
+                        Lorem ipsum dolor, sit amet consectetur
+                        adipisicing.
+                    </div>
                 </div>
-            </div>
-        </li>
-        <li class="menu-item">
-            <img
-                src=${burger4}
-                alt="" />
-            <div class="food-overlay">
-                <div class="food-name">BURGER 4</div>
-                <div class="food-description">
-                    Lorem ipsum dolor, sit amet consectetur
-                    adipisicing.
+            </li>
+            <li class="menu-item">
+                <img
+                    src=${burger4}
+                    alt="" />
+                <div class="food-overlay">
+                    <div class="food-name">BURGER 4</div>
+                    <div class="food-description">
+                        Lorem ipsum dolor, sit amet consectetur
+                        adipisicing.
+                    </div>
                 </div>
-            </div>
-        </li>
-    </ul>
-</div>
-</div>
+            </li>
+        </ul>
+        </div>
+    
     `;
     divMenu.id = "menu";
     divContainer.appendChild(divMenu);
