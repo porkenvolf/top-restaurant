@@ -33,7 +33,7 @@ export default function pageLoad(page) {
 function renderNav() {
     const divNav = document.createElement("div");
     divNav.innerHTML = `
-    <div class="nav-content">
+    <div class="nav-content fixed-width">
         <span class="nav-logo"
             ><img src=${burgerLogo} alt=""
         />
@@ -71,14 +71,14 @@ function renderHero() {
         </div>
     </div>
     `;
-    divHero.id = "hero";
+    divHero.classList.add("hero");
     divContainer.appendChild(divHero);
 }
 function renderMenu() {
     const divMenu = document.createElement("div");
     divMenu.innerHTML = `
 
-    <div class="menu-content">
+    <div class="menu-content  fixed-width">
         <div class="menu-title">OUR MENU</div>
         <div class="menu-sub-text">
             Carefully crafted by artisans of meat. Please take your
@@ -138,5 +138,6 @@ function renderMenu() {
     
     `;
     divMenu.id = "menu";
+    divMenu.classList.add("bgDoodles");
     divContainer.appendChild(divMenu);
 }

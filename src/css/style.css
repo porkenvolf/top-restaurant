@@ -2,15 +2,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 
 @import url(./equalize.css);
+@import url(./scrollbar.css);
 
 :root {
-    --main-width: max(70vw, 500px);
+    --main-width: max(60vw, 500px);
     --bg-dark: rgb(14, 14, 14);
     --bg-mid: rgb(37, 37, 37);
     --bg-light: rgb(62, 62, 62);
     color: rgb(224, 224, 224);
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
+}
+
+.bgDoodles {
+    background: linear-gradient(rgba(0, 0, 0, 0.8) 100%, rgba(0, 0, 0, 1)) 0%,
+        url("../img/bitmap.jpg");
+    background-size: cover;
+    background-position: right;
+}
+.fixed-width {
+    width: min(var(--main-width), 100vw);
+}
+
+.fixed-width .title {
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Playfair Display", serif;
+    padding: 0 20px;
 }
 #container {
     min-height: 100vh;
@@ -37,8 +55,7 @@
 }
 #nav .nav-content {
     display: flex;
-    flex: 1 1 auto;
-    max-width: var(--main-width);
+    flex: 0 1 auto;
 }
 #nav .nav-list {
     display: flex;
@@ -61,7 +78,7 @@
     filter: invert(1) hue-rotate(2deg) brightness(80%);
 }
 
-#hero {
+.hero {
     min-width: 100vw;
     flex: 1 1 100vh;
 
@@ -77,7 +94,7 @@
     align-items: center;
     gap: 2rem;
 }
-#hero .hero-content {
+.hero-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,38 +104,32 @@
     max-width: 600px;
     text-shadow: 1px 1px 2px black;
 }
-#hero .hero-main-text {
+.hero-main-text {
     text-align: center;
     font-size: 4rem;
     font-family: "Playfair Display", serif;
+    padding: 0 20px;
 }
-#hero .hero-sub-text {
+.hero-sub-text {
     text-align: center;
     font-size: 1.1rem;
-    padding: 15px;
+    padding: 0 20px;
 }
-#hero .hero-icon img {
+.hero-icon img {
     width: 50px;
     filter: invert(1);
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 50px;
 }
 
 #menu {
-    background: var(--bg-dark);
     min-width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    background: linear-gradient(rgba(0, 0, 0, 0.8) 100%, rgba(0, 0, 0, 1)) 0%,
-        url("../img/bitmap.jpg");
-    background-size: cover;
-    background-position: right;
 }
 #menu .menu-content {
     padding: 100px 0;
-    width: min(var(--main-width), 100vw);
 }
 #menu .menu-title {
     font-family: "Playfair Display", serif;
@@ -173,4 +184,40 @@
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 10px;
+}
+
+#about {
+    flex: 1 1 100vh;
+    background: linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(255, 255, 255, 0) 30%,
+                rgba(0, 0, 0, 0.8)
+            )
+            70%,
+        url(../img/jonathan-borba-1kA3lACHeqk-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.section {
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section .article {
+    display: flex;
+    flex-wrap: wrap;
+}
+.section .article img {
+    width: 100%;
+}
+.section .article .text {
+    flex: 1 1 50%;
+    padding: 0 20px;
+    padding-bottom: 50px;
+    min-width: 300px;
+}
+.section .title {
+    padding: 100px 0;
 }
