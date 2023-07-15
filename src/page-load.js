@@ -4,6 +4,7 @@ import burger1 from "./img/amirali-mirhashemian-88YAXjnpvrM-unsplash.jpg";
 import burger2 from "./img/amirali-mirhashemian-d-yAWqj-DRg-unsplash.jpg";
 import burger3 from "./img/amirali-mirhashemian-9Bqiusimq6M-unsplash.jpg";
 import burger4 from "./img/amirali-mirhashemian-9hIJ4ZLMnZA-unsplash.jpg";
+import picDude from "./img/jonathan-borba-RfVp0oyqJ5w-unsplash.jpg";
 
 const divContainer = document.createElement("div");
 const body = document.querySelector("body");
@@ -18,10 +19,10 @@ export default function pageLoad(page) {
     renderNav();
     switch (page) {
         case "menu":
-            renderHero();
             renderMenu();
             break;
         case "about":
+            renderAbout();
             break;
         case "contact":
             break;
@@ -55,7 +56,7 @@ function renderNav() {
     divNav.id = "nav";
     divContainer.appendChild(divNav);
 }
-function renderHero() {
+function renderMenu() {
     const divHero = document.createElement("div");
     divHero.innerHTML = `
     <div class="hero-content">
@@ -73,8 +74,7 @@ function renderHero() {
     `;
     divHero.classList.add("hero");
     divContainer.appendChild(divHero);
-}
-function renderMenu() {
+
     const divMenu = document.createElement("div");
     divMenu.innerHTML = `
 
@@ -140,4 +140,73 @@ function renderMenu() {
     divMenu.id = "menu";
     divMenu.classList.add("bgDoodles");
     divContainer.appendChild(divMenu);
+}
+function renderAbout() {
+    const divHero = document.createElement("div");
+    divHero.innerHTML = `
+    <div class="hero-content fixed-width">
+        <div class="hero-main-text">DRIVEN BY PASSION...</div>
+        
+        <div class="hero-icon">
+            <img src=${arrowDown}  alt="" />
+        </div>
+    </div>
+    `;
+    divHero.classList.add("hero");
+    divHero.classList.add("bgDoodles");
+    divHero.id = "about";
+    divContainer.appendChild(divHero);
+
+    const divArticle = document.createElement("div");
+    divArticle.innerHTML = `
+    <div class="section bgDoodles">
+        <div class="fixed-width">
+            <div class="title">...AND A TINY BIT OF MADNESS!</div>
+            <div class="article">
+                <div class="text">
+                    Our passion for creating exceptional hamburgers
+                    began as a humble love affair with food. As a group
+                    of like-minded individuals, we shared a common
+                    appreciation for culinary delights and an insatiable
+                    curiosity to explore new flavors and techniques.<br /><br />
+                    Our journey began with a quest to elevate the
+                    classic hamburger to new heights. We spent countless
+                    hours experimenting with different ingredients,
+                    searching for the perfect blend of flavors and
+                    textures that would make our hamburgers truly
+                    outstanding. We sourced the finest locally sourced,
+                    organic ingredients, carefully selecting each
+                    component to ensure the highest quality and
+                    freshness.<br /><br />
+                    As our skills and knowledge grew, so did our
+                    ambition. We delved into the world of gourmet
+                    cuisine, drawing inspiration from various culinary
+                    traditions and fusing them with our own unique
+                    twist. We sought to create a burger experience that
+                    was not only delicious but also a feast for the
+                    senses.<br /><br />
+                    With each burger we crafted, we poured our heart and
+                    soul into every detail. From hand-forming the
+                    patties to toasting the brioche buns to perfection,
+                    we aimed to create a symphony of flavors that would
+                    leave a lasting impression on every customer.<br /><br />
+
+                    Today, our restaurant stands as a testament to our
+                    unwavering dedication and love for the art of burger
+                    making. We invite you to join us on this gastronomic
+                    journey, where every bite tells a story of passion,
+                    creativity, and a deep-rooted desire to bring the
+                    best hamburgers to our beloved hipster audience.
+                </div>
+                <div class="text">
+                    <img
+                        src=${picDude}
+                        alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    `;
+    divArticle.classList.add("section");
+    divContainer.appendChild(divArticle);
 }
