@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Burgers!</title>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="nav">
+                <div class="nav-content fixed-width">
+                    <span class="nav-logo"
+                        ><img src="./img/burger.svg" alt=""
+                    /></span>
+                    <ul class="nav-list">
+                        <li class="nav-item">MENU</li>
+                        <li class="nav-item">ABOUT</li>
+                        <li class="nav-item">CONTACT</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="menu" class="bgDoodles">
+                <div class="menu-content fixed-width">
+                    <div class="menu-title">CONTACT US</div>
+                    <div class="menu-sub-text">
+                        <h3>Reservations:</h3>
+                        <p>
+                            Phone Number:
+                            <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                        </p>
+                        <p>Address: 123 Main Street, Anytown, USA</p>
+                        <h3>Open Hours:</h3>
+                        <ul>
+                            <li>Monday to Thursday: 11:00 AM - 10:00 PM</li>
+                            <li>Friday and Saturday: 11:00 AM - 11:00 PM</li>
+                            <li>Sunday: 12:00 PM - 9:00 PM</li>
+                        </ul>
+                        <div class="mapouter">
+                            <div class="gmap_canvas">
+                                <iframe
+                                    class="gmap_iframe"
+                                    width="100%"
+                                    frameborder="0"
+                                    scrolling="no"
+                                    marginheight="0"
+                                    marginwidth="0"
+                                    src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=University of Oxford&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe
+                                ><a href="https://connectionsgame.org/"
+                                    >Connections Game</a
+                                >
+                            </div>
+                            <style>
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                    width: 100%;
+                                    height: 400px;
+                                }
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                    width: 100%;
+                                    height: 400px;
+                                }
+                                .gmap_iframe {
+                                    height: 400px !important;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
