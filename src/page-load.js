@@ -16,6 +16,12 @@ export default function pageLoad(page) {
         element.remove();
     });
 
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+    });
+
     renderNav();
     switch (page) {
         case "menu":
